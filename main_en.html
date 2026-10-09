@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENCS3320-My Tiny Webserver 25/26</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- Intro Section -->
+   <div class="intro">
+     <h1>Welcome to our course</h1>
+     <h1 class="Blue">Computer Networks</h1>
+     <h1 class="Blue">This is a tiny webserver</h1>
+   </div>
+
+ <!-- Summary Box -->
+<div class="container">
+  <section class="custom-summary">
+    <h2 class="custom-title">Cache Terms from RFC 2616</h2>
+    <p class="custom-subtitle">
+     These terms describe how caching works in HTTP to improve performance and reduce server load.
+    </p>
+    <div class="custom-boxes">
+
+      <!-- Term 1 -->
+      <div class="custom-box">
+        <h3>1</h3>
+        <h4>public</h4>
+        <p>
+          The <b>public</b> directive explicitly allows any type of cache—whether a browser or a shared proxy—to store the response.  
+          This is useful for static or openly accessible content where sharing cached copies improves load time and reduces server requests.  
+          <br>Example: <code>Cache-Control: public, max-age=3600</code> enables caching for one hour.
+        </p>
+      </div>
+
+      <!-- Term 2 -->
+      <div class="custom-box">
+        <h3>2</h3>
+        <h4>private</h4>
+        <p>
+          The <b>private</b> directive indicates that the response is meant for a single user only and must not be stored by shared caches.  
+          It ensures that personalized or sensitive information remains accessible only through the user’s own browser cache and not by public or proxy caches.  
+          <br>Example: <code>Cache-Control: private, max-age=600</code> stores the data only for the individual user for 10 minutes.
+        </p>
+      </div>
+
+      <!-- Term 3 -->
+      <div class="custom-box">
+        <h3>3</h3>
+        <h4>no-cache</h4>
+        <p>
+          The <b>no-cache</b> directive requires caches to revalidate the stored response with the origin server before reusing it.  
+          Although the response can be stored locally, it cannot be served to the client unless the server confirms that it has not changed.  
+          This guarantees freshness while still providing caching benefits.  
+          <br>Example: <code>Cache-Control: no-cache</code> forces validation before reuse.
+        </p>
+      </div>
+
+      <!-- Term 4 -->
+      <div class="custom-box">
+        <h3>4</h3>
+        <h4>no-store</h4>
+        <p>
+          The <b>no-store</b> directive is the strictest form of cache control, completely preventing any storage of the request or response.  
+          It is designed for highly confidential information, ensuring that no data is written to disk or memory where it could later be accessed.  
+          <br>Example: <code>Cache-Control: no-store</code> is often used for login pages or financial transactions.
+        </p>
+      </div>
+      <!-- Term 5 -->
+      <div class="custom-box">
+        <h3>5</h3>
+        <h4>max-age</h4>
+        <p>
+          The <b>max-age</b> directive defines the maximum time period (in seconds) during which a cached response is considered fresh.  
+          Within this time, the cache can serve the stored response without contacting the server. After it expires, the cache must revalidate or fetch a new version.  
+          <br>Example: <code>Cache-Control: max-age=300</code> allows reuse of the cached content for five minutes.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</div>  
+   <h1 class="team-title">Team Members</h1>
+   <!-- Yasmin -->
+   <div class="container">
+        <div class="box">
+            <div class="text-box">
+                <h1>I'm <span>Yasmin Badwan</span></h1>
+                <h3>Computer Engineering Student</h3>
+                <h3>ID:1230271</h3>
+                <p>
+                 Throughout my academic journey, I have gained experience in developing web applications using HTML, CSS, and JavaScript, as well as working with Java OOP and Python data analysis. My skills include programming in Java, Python, C++, and SQL, and I enjoy collaborating in team projects. Outside of academics, I am passionate about drawing, digital design, and exploring new technologies.
+                </p>
+            </div>
+           <img src="1.jpg" alt="Yasmin" class="profile-img">
+        </div>
+   </div>
+
+   <!-- Hanaa -->
+   <div class="container">
+        <div class="box">
+            <div class="text-box">
+                <h1>I'm <span>Hanaa</span></h1>
+                <h3>Computer Science Student</h3>
+                <h3>ID:1230263</h3>
+                <p>
+                  I have worked on projects involving web applications, Java OOP, and Python data analysis, and I am skilled in Java, Python, C++, SQL, and Git. I am enthusiastic about solving coding challenges, taking online courses, and keeping up with the latest AI trends. My curiosity and dedication help me continuously improve my programming abilities and broaden my knowledge in computer science.
+                </p>
+            </div>
+            <img src="2.jpeg" alt="hanna" class="profile-img">
+        </div>
+   </div>
+
+   <!-- Sewar -->
+   <div class="container">
+        <div class="box">
+            <div class="text-box">
+                <h1>I'm <span>Sewar Masri</span></h1>
+                <h3>Computer Engineering Student</h3>
+                <h3>ID:1231240</h3>
+                <p>
+                  My coursework and projects have focused on operating systems labs, computer networks, and digital systems design. I have practical knowledge of C programming, basic Python, and Linux environments, which has strengthened my technical foundation. I enjoy video editing, exploring maps, and hands-on learning experiences, as they allow me to combine creativity with technical skills.
+                </p>
+            </div>
+           <img src="3.jpeg" alt="sewar" class="profile-img">
+
+        </div>
+   </div>
+
+ 
+<!-- Python Section -->
+<div class="python-section">
+  <h1>To learn Python click the following link</h1>
+  <img src="p.jpg" alt="Python" class="python-img">
+  <a href="https://www.w3schools.com/python/python_strings.asp" target="_blank" class="python-link">
+    Python Strings Tutorial
+  </a>
+</div>
+
+
+   <!-- Links Section -->
+   <div class="links">
+       <h3 >Access your account or sign up to start your journey.</h3>
+      <a href="register.html">Register</a> | 
+      <a href="login.html">Login</a>
+   </div>
+
+ 
+
+
+</body>
+</html>
+

@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins"), local("Arial");
+}
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(135deg, #1a002d, #0c0c3f, #130124);
+}
+
+h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 700;
+    color: #f0f0ff;
+    text-shadow: 
+        0 0 12px rgba(255,255,255,0.5),
+        0 0 25px rgba(255,255,255,0.3),
+        2px 2px 6px rgba(0,0,0,0.7);
+}
+h1.team-title {
+    margin-bottom: 80px;
+}
+h1.Blue {
+    margin-top: 20px;
+    color: #4bb5e2ce;
+    text-shadow: 
+        0 0 12px rgba(159,110,255,0.9),
+        0 0 25px rgba(159,110,255,0.6),
+        2px 2px 6px rgba(0,0,0,0.7);
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 100px;
+    background: url("0.png") no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.box {
+    background: linear-gradient(145deg, #2a0035, #1c1c3f, #0e0e2a);
+    width: 70%;
+    max-width: 1200px;
+    padding: 60px 70px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(159,110,255,0.3);
+    margin-bottom: 50px;
+}
+
+.text-box h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.text-box h1 span {
+    color: #9f6eff;
+    text-shadow: 0 0 10px rgba(159,110,255,0.6);
+}
+.text-box h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #9f6eff;
+    text-align: left;
+}
+.text-box p {
+    width: 480px;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #d0caff;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Images */
+.circle {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(159,110,255,0.4);
+    background-size: cover;
+    background-position: center;
+}
+.profile-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(159,110,255,0.4);
+    object-fit: cover;
+}
+
+/* Links */
+.links {
+    margin: 40px 0;
+    color: #f8f5ff;
+}
+.links a {
+    color: #9f6eff;
+    font-size: 18px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+/* Python Section */
+.python-section {
+    margin: 80px auto;
+    text-align: center;
+}
+.python-section h1 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.python-img {
+    width: 620px;
+    height: 220px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(159,110,255,0.4);
+    object-fit: cover;
+    margin: 0 auto 30px auto;
+    display: block;
+}
+.python-link {
+    font-size: 20px;
+    color: #9f6eff;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.custom-summary {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+.custom-title {
+  font-size: 40px;
+  color: #f0f0ff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px rgba(255,255,255,0.5),
+               0 0 25px rgba(159,110,255,0.4);
+}
+.custom-subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #d0caff;
+  opacity: 0.9;
+}
+
+.custom-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.custom-box {
+  background: linear-gradient(145deg, #2a0035, #1c1c3f, #0e0e2a);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(159,110,255,0.2);
+  
+}
+.custom-box h3 {
+  font-size: 38px;
+  margin: 0;
+  color: #9f6eff;
+  text-shadow: 0 0 10px rgba(159,110,255,0.6);
+}
+
+.custom-box h4 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.custom-box p {
+  color: #d0caff;
+  opacity: 0.9;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+

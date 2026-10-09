@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Page - ENCS3320</title>
+    <style>
+        @font-face {
+            font-family: "Poppins";
+            src: local("Poppins"), local("Arial");
+        }
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(135deg, #1a002d, #0c0c3f, #130124);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .protected-container {
+            width: 500px;
+            padding: 45px 40px;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #2a0035, #1c1c3f, #0e0e2a);
+            box-shadow: 0 0 30px rgba(159,110,255,0.3);
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
+            background: radial-gradient(circle, #4CAF50 0%, #2a0035 70%);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(76,175,80,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon-circle:before {
+            content: "✓";
+            font-size: 50px;
+            color: #fff;
+            font-weight: bold;
+        }
+        h2 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.4);
+            color: #4CAF50;
+        }
+        .username {
+            font-size: 20px;
+            color: #9f6eff;
+            margin-bottom: 25px;
+        }
+        .info-box {
+            background: rgba(255, 255, 255, 0.10);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .info-box p {
+            margin: 10px 0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .logout-btn {
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-radius: 999px;
+            font-size: 17px;
+            background: #f44336;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(244,67,54,0.5);
+            transition: 0.2s;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="protected-container">
+        <div class="icon-circle"></div>
+        <h2>Welcome!</h2>
+        
+
+        <div class="info-box">
+            <p>✓ You are successfully logged in</p>
+            <p>✓ This is a protected page</p>
+            <p>✓ Your session is active</p>
+            <p>✓ You can open this page in multiple browser tabs and remain logged in</p>
+            <p>✓ The session cookie is stored in your browser</p>
+        </div>
+
+        <form method="POST" action="/logout">
+            <button type="submit" class="logout-btn">Logout</button>
+        </form>
+    </div>
+</body>
+</html>

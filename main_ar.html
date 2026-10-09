@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENCS3320-خادم الويب الصغير 25/26</title>
+  <link rel="stylesheet" href="stylear.css">
+</head>
+<body>
+
+  <!-- Intro Section -->
+  <div class="intro">
+    <h1>مرحباً بكم في مساقنا</h1>
+    <h1 class="Blue">شبكات الحاسوب</h1>
+     <h1 class="Blue">هذا خادم الويب صغير</h1>
+  </div>
+
+  <!-- Summary Box -->
+  <div class="container">
+    <section class="custom-summary">
+      <h2 class="custom-title">مصطلحات الكاش من RFC 2616</h2>
+      <p class="custom-subtitle">
+        تشرح هذه المصطلحات كيف يعمل التخزين المؤقت (Caching) في بروتوكول HTTP لتحسين الأداء وتقليل ضغط الطلبات على الخادم.
+      </p>
+      <div class="custom-boxes">
+
+        <!-- Term 1 -->
+        <div class="custom-box">
+          <h3>١</h3>
+          <h4>public</h4>
+          <p>
+            التوجيه <b>public</b> يسمح لأي نوع من الكاش، سواء كان متصفحاً أو خادماً وسيطاً (Proxy)، بتخزين الاستجابة.  
+            يُستخدم عادةً للمحتوى الثابت أو المفتوح للجميع، حيث إن مشاركة النسخ المخزنة يقلّل زمن التحميل وعدد الطلبات المرسلة إلى الخادم.  
+            <br>مثال: <code>Cache-Control: public, max-age=3600</code> يفعّل التخزين المؤقت لمدة ساعة.
+          </p>
+        </div>
+
+        <!-- Term 2 -->
+        <div class="custom-box">
+          <h3>٢</h3>
+          <h4>private</h4>
+          <p>
+            التوجيه <b>private</b> يعني أن الاستجابة مخصّصة لمستخدم واحد فقط، ولا يجب أن تُخزَّن في كاش مشترك أو عام.  
+            يضمن هذا أن المعلومات الشخصية أو الحساسة تبقى متاحة فقط في كاش متصفح المستخدم نفسه، وليس في خوادم وسيطة.  
+            <br>مثال: <code>Cache-Control: private, max-age=600</code> يخزّن البيانات للمستخدم الفرد لمدة ١٠ دقائق.
+          </p>
+        </div>
+
+        <!-- Term 3 -->
+        <div class="custom-box">
+          <h3>٣</h3>
+          <h4>no-cache</h4>
+          <p>
+            التوجيه <b>no-cache</b> يطلب من الكاش أن يتحقق من الخادم الأصلي قبل إعادة استخدام النسخة المخزّنة.  
+            يمكن حفظ الاستجابة محلياً، لكن لا يجوز إرسالها للعميل إلا بعد أن يؤكد الخادم أنها ما زالت صالحة ولم تتغير.  
+            هذا يضمن حداثة البيانات مع الاستفادة من التخزين المؤقت.  
+            <br>مثال: <code>Cache-Control: no-cache</code> يفرض التحقق قبل إعادة الاستخدام.
+          </p>
+        </div>
+
+        <!-- Term 4 -->
+        <div class="custom-box">
+          <h3>٤</h3>
+          <h4>no-store</h4>
+          <p>
+            التوجيه <b>no-store</b> هو الأشد تقييداً، إذ يمنع تماماً تخزين الطلب أو الاستجابة في الكاش أو على القرص.  
+            يُستخدم مع المعلومات عالية الحساسية، مثل بيانات تسجيل الدخول أو العمليات المالية، لضمان عدم حفظ أي بيانات يمكن الوصول إليها لاحقاً.  
+            <br>مثال: <code>Cache-Control: no-store</code> يُستخدم غالباً مع صفحات تسجيل الدخول والمعاملات البنكية.
+          </p>
+        </div>
+
+        <!-- Term 5 -->
+        <div class="custom-box">
+          <h3>٥</h3>
+          <h4>max-age</h4>
+          <p>
+            التوجيه <b>max-age</b> يحدّد المدة القصوى (بالثواني) التي تعتبر خلالها الاستجابة المخزنة ما زالت حديثة (Fresh).  
+            خلال هذه المدة يمكن للكاش إعادة استخدام النسخة المخزّنة بدون الرجوع إلى الخادم. بعد انتهاء المدة يجب إعادة التحقق أو جلب نسخة جديدة.  
+            <br>مثال: <code>Cache-Control: max-age=300</code> يسمح بإعادة استخدام المحتوى المخزّن لمدة ٥ دقائق.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <h1 class="team-title">أعضاء الفريق</h1>
+
+  <!-- Yasmin -->
+  <div class="container">
+    <div class="box">
+      <div class="text-box">
+        <h1>أنا <span>ياسمين بدوان</span></h1>
+        <h3>طالبة هندسة حاسوب</h3>
+        <h3>الرقم الجامعي: ١٢٣٠٢٧١</h3>
+        <p>
+          خلال مسيرتي الدراسية اكتسبت خبرة في تطوير تطبيقات الويب باستخدام HTML وCSS وJavaScript،
+          والعمل بمفاهيم البرمجة الكينونية في Java وتحليل البيانات باستخدام Python. 
+          أمتلك مهارات برمجية في Java وPython و++C وSQL، وأستمتع بالعمل ضمن فرق المشاريع. 
+          خارج الإطار الأكاديمي أحب الرسم والتصميم الرقمي واستكشاف التقنيات الجديدة.
+        </p>
+      </div>
+      <img src="1.jpg" alt="Yasmin" class="profile-img">
+    </div>
+  </div>
+
+  <!-- Hanaa -->
+  <div class="container">
+    <div class="box">
+      <div class="text-box">
+        <h1>أنا <span>هناء</span></h1>
+        <h3>طالبة علم حاسوب</h3>
+        <h3>الرقم الجامعي: ١٢٣٠٢٦٣</h3>
+        <p>
+          عملت على مشاريع تتضمن تطبيقات ويب، وبرمجة كينونية في Java، وتحليل بيانات باستخدام Python،
+          وأمتلك مهارات في Java وPython و++C وSQL واستخدام Git. 
+          أحب حل التحديات البرمجية، وأتابع الدورات الإلكترونية وأهتم بآخر تطورات الذكاء الاصطناعي،
+          مما يساعدني على تطوير قدراتي البرمجية وتوسيع معرفتي في علم الحاسوب.
+        </p>
+      </div>
+      <img src="2.jpeg" alt="Hanaa" class="profile-img">
+    </div>
+  </div>
+
+  <!-- Sewar -->
+  <div class="container">
+    <div class="box">
+      <div class="text-box">
+        <h1>أنا <span>سِوَار مصري</span></h1>
+        <h3>طالبة هندسة حاسوب</h3>
+        <h3>الرقم الجامعي: ١٢٣١٢٤٠</h3>
+        <p>
+          ركّزت مشاريعي ومساقاتي على مختبرات أنظمة التشغيل، وشبكات الحاسوب، وتصميم الأنظمة الرقمية.
+          لدي معرفة عملية في لغة C وبعض أساسيات Python وبيئات Linux، مما عزز من خلفيتي التقنية. 
+          أستمتع بالمونتاج، واستكشاف الخرائط، والتعلّم العملي الذي يتيح لي الجمع بين الإبداع والمهارات التقنية.
+        </p>
+      </div>
+      <img src="3.jpeg" alt="Sewar" class="profile-img">
+    </div>
+  </div>
+
+  <!-- Python Section -->
+  <div class="python-section">
+    <h1>لتعلّم لغة Python اضغط على الرابط التالي</h1>
+    <img src="p.jpg" alt="Python" class="python-img">
+    <a href="https://www.w3schools.com/python/python_strings.asp" target="_blank" class="python-link">
+      دروس Python Strings
+    </a>
+  </div>
+
+  <!-- Links Section -->
+  <div class="links">
+    <h3>يمكنك إنشاء حساب جديد أو تسجيل الدخول للبدء بالتجربة.</h3>
+    <a href="register.html">تسجيل</a> | 
+    <a href="login.html">تسجيل الدخول</a>
+  </div>
+
+</body>
+</html>

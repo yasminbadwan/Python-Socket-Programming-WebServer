@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ENCS3320</title>
+    <style>
+        @font-face {
+            font-family: "Poppins";
+            src: local("Poppins"), local("Arial");
+        }
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(135deg, #1a002d, #0c0c3f, #130124);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .login-container {
+            width: 380px;
+            padding: 45px 40px;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #2a0035, #1c1c3f, #0e0e2a);
+            box-shadow: 0 0 30px rgba(159,110,255,0.3);
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
+            background: radial-gradient(circle, #9f6eff 0%, #2a0035 70%);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(159,110,255,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon-circle:before {
+            content: "⏻";
+            font-size: 42px;
+            color: #e8e8ff;
+            text-shadow: 0 0 15px rgba(255,255,255,0.8);
+        }
+        h2 {
+            margin: 0 0 20px 0;
+            font-size: 28px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.4);
+            color: #f0f0ff;
+        }
+        .input-box {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .input-box label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #9f6eff;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 999px;
+            border: none;
+            background: rgba(255, 255, 255, 0.10);
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            box-shadow: 0 0 8px rgba(255,255,255,0.15);
+            box-sizing: border-box;
+        }
+        .input-box input::placeholder {
+            color: rgba(255,255,255,0.65);
+        }
+        .login-btn {
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-radius: 999px;
+            font-size: 17px;
+            background: #9f6eff;
+            color: #130124;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(159,110,255,0.5);
+            transition: 0.2s;
+            margin-top: 10px;
+        }
+
+        .link-text {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .link-text a {
+            color: #9f6eff;
+            text-decoration: none;
+        }
+        .link-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="icon-circle"></div>
+        <h2>Login</h2>
+
+        <form method="POST" action="/login">
+            <div class="input-box">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter username" required>
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="•••••••••" required>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <p class="link-text">
+            Don't have an account? <a href="/register.html">Register here</a>
+        </p>
+    </div>
+</body>
+</html>
